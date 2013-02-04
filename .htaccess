@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteRule  ^googleflicker.api$ googleflicker.api.php?service=$1&engine=$2&tag=$3&datatype=$4&%{QUERY_STRING}
+#RewriteRule  ^([^/]*)/([^/]*)$   googleflicker.api?service=$1engine=$2&tag=$3&datatype=$4 &%{QUERY_STRING}
+
+</IfModule>
